@@ -1,0 +1,263 @@
+
+/*== BASE == */
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*== LAYOUT == */
+.navigation{ 
+    display: flex; 
+    justify-content: space-around;
+    background-color: rgba(4, 3, 3, 0.875); 
+    top:0; 
+    position: sticky; 
+    z-index:1000; 
+}
+
+.footer{
+    display: flex;
+    gap:10rem;
+    background-color: rgb(2, 45, 77);
+    color:whitesmoke;
+    justify-content: space-around;
+    height: 20rem;
+    line-height: 1.5rem;
+    border-top: 5px solid rgba(255,255,255,0.15);
+}
+
+/*== NAVIGATION == */
+.logo{
+    margin: 15px;
+    padding-left: 30px;
+    color: white;
+}
+
+.navlink{
+    display: flex;
+    gap: 40px;
+    padding-top: 40px;
+    font-size: large;
+}
+
+.navlink a{
+    padding:10px;
+    border:2px solid transparent;
+    text-decoration: none;
+    color: white;
+}
+
+.navlink a:hover{
+    border: 2px solid orange;
+    background-color: rgb(63, 62, 62);
+    transition: .1s;
+}
+
+/*== HERO/INTRO ==*/
+.Intro{
+    background-image: url("Main.png");
+    height: 630px;
+    color: white;
+    padding-top: 250px;
+    letter-spacing: 1.9px;
+    line-height: 60px;
+}
+
+.Intro button{
+    padding: 17px;
+    background-color: wheat;
+    font-size: 15px;
+    margin-left:27rem;
+    border: 3px solid burlywood;
+    border-radius: 10%;
+    cursor: pointer;
+}
+
+.wlc{
+    font-size: 50px;
+    text-align: center;
+}
+
+.tagline{
+    font-size: 20px;
+    text-align: center;
+}
+
+/*== COMMON ==*/
+.menu,.aboutus,.contact{
+    padding:5rem;
+    background-color: #7A4A1E;
+    font-size: larger;
+    color: #f5e6c8;
+}
+
+.Intro button:hover,.resv button:hover{
+    background-color: rgb(50, 50, 46);
+    color:white;
+    transform: scale(1.05);
+    transition: 0.3s ease;
+}
+
+/*== MENU ==*/
+.menu-title{
+    font-size: 3rem;
+    color: #E6C15A; 
+    text-align: center;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid burlywood;
+}
+
+.price{
+    color:#e2ad1c;
+    font-weight: lighter;
+}
+
+.menu-tag{
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    letter-spacing: 1px;
+    opacity: 0.8;
+}
+
+.menu-category h3{
+    border: 3px solid rgb(152, 132, 18);
+    border-radius: 10px;
+    padding: 5px;
+    font-size: 2rem;
+    color:#e2ad1c; 
+    background-color:#1C1C1C;
+}
+
+.menu-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: -1px 1px 3px rgb(1, 1, 1);
+    transition: transform 0.3s ease;
+    font-size: large;
+}
+
+/*== ABOUT ==*/
+.about{
+    display: flex;
+    gap: 10rem;
+}
+
+.about p{
+    max-width: 520px;
+    line-height: 1.4;
+}
+
+.about img{
+    border-radius: 12px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+}
+
+/*== CONTACT/FORM ==*/
+.contact-content{
+    display: flex;
+    gap:25rem;
+    justify-content: space-around;
+}
+
+.resv input{          
+    padding: 10px;  
+    width: 25rem;
+    font-size:1rem;     
+    border: 1px solid black;
+    margin-bottom: 2rem;
+    cursor: pointer;
+}
+
+.intouch p{
+    color: rgba(4, 4, 63, 0.755);
+    line-height: 30px;
+}
+
+.resv button{
+    padding: 10px;
+    background-color: wheat;
+    font-size: 15px;
+    border: 3px solid burlywood;
+    cursor: pointer;
+}
+
+/*== FOOTER ==*/
+.foot-head{
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-top: 1.5rem;
+}
+
+.foot-text{
+    line-height: 2rem;
+    max-width: 220px;
+}
+.footer a{
+    text-decoration: none;
+    color:gray;
+}
+.footer a:hover {
+  color: #ffffff;
+}
+
+/*== RESPONSIVITY==*/
+@media (max-width: 768px) {
+
+  .navigation {
+    flex-direction: column;
+    gap: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .navlink {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 0;
+  }
+
+  .Intro {
+    padding-top: 180px;
+    line-height: 45px;
+    text-align: center;
+  }
+
+  .Intro button {
+    margin: 1rem auto;
+    display: block;
+  }
+
+  .about {
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+    text-align: center;
+  }
+
+  .about img {
+    width: 100%;
+    max-width: 360px;
+  }
+
+  .contact-content {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .resv input {
+    width: 100%;
+  }
+
+  .footer {
+    flex-direction: column;
+    gap: 3rem;
+    padding: 3rem 2rem;
+    text-align: center;
+  }
+
+}
